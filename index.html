@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MediaMonks</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body onload="initialize()">
+    <div class="container">
+      <!-- img id="scene" src="assets/images/backgroundWithMarks.jpg" -->
+      <h1 id="main-title" class="top-left visible">
+        We are breaking our vow of silence
+      </h1>
+      <a class="button button-prev" href="#" onclick="goToPrevSlide()"></a>
+      <a
+        class="button button-next visible"
+        href="#"
+        onclick="goToNextSlide()"
+      ></a>
+
+      <div class="last-slide">
+        <h1 class="last-slide__title">Become a Monk</h1>
+        <p class="last-slide__text">
+          Interested in joining our monastery?<br />
+          Check out our current opennings on
+          <a class="last-slide__link" href="http://mediamonks.com/careers"
+            >mediamonks.com/careers</a
+          >
+        </p>
+        <ul class="last-slide__social">
+          <li class="e-mail">
+            <a href="#"
+              ><i class="fa fa-envelope" aria-hidden="true"></i>Mail ons</a
+            >
+          </li>
+          <li class="facebook">
+            <a href="#"
+              ><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a
+            >
+          </li>
+          <li class="twitter">
+            <a href="#"
+              ><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <footer class="footer">
+        <ol class="footer__button-container">
+          <li>
+            <a
+              class="footer__button footer__button--active footer__button--zero"
+              href="#"
+              onclick="goToSlide(0)"
+            >
+            </a>
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--one"
+              href="#"
+              onclick="goToSlide(1)"
+              >1</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--two"
+              href="#"
+              onclick="goToSlide(2)"
+              >2</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--three"
+              href="#"
+              onclick="goToSlide(3)"
+              >3</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--four"
+              href="#"
+              onclick="goToSlide(4)"
+              >4</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--five"
+              href="#"
+              onclick="goToSlide(5)"
+              >5</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--six"
+              href="#"
+              onclick="goToSlide(6)"
+              >6</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--seven"
+              href="#"
+              onclick="goToSlide(7)"
+              >7</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--eight"
+              href="#"
+              onclick="goToSlide(8)"
+              >8</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__button footer__button--nine"
+              href="#"
+              onclick="goToSlide(9)"
+            >
+            </a>
+          </li>
+        </ol>
+        <p id="footer-text" class="visible landing">
+          In Juanary 2011, after a decade of digital, we opened the doors to our
+          temple. Follow our noble eightfold path to digital enlightenment here.
+        </p>
+        <div class="footer__logo"></div>
+      </footer>
+    </div>
+
+    <div class="preload visible">
+      <img class="preload__monk" src="assets/images/monk.png" />
+      <h4 id="phrase">Patience!</h4>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

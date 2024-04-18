@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "klavikaRegular";
+  src: url("../assets/font/klavika-regular-webfont.woff");
+}
+@font-face {
+  font-family: "klavikaLight";
+  src: url("../assets/font/klavika-light-webfont.woff");
+}
+@font-face {
+  font-family: "klavikaMedium";
+  src: url("../assets/font/klavika-medium-webfont.woff");
+}
+@font-face {
+  font-family: "klavikaBold";
+  src: url("../assets/font/klavika-bold-webfont.woff");
+}
+
+body {
+  background-color: #000;
+}
+img#scene {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  min-height: 753px;
+  transition: transform ease-in-out 1000ms;
+}
+
+#main-title {
+  position: absolute;
+  max-width: 420px;
+  margin: 45px 0 0 35px;
+  color: #fff;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1.2em;
+  font-family: "klavikaLight";
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+#main-title.visible {
+  opacity: 1;
+  transition: opacity 600ms ease-out;
+}
+#main-title.top-left {
+  top: 0;
+  left: 0;
+}
+#main-title.top-right {
+  top: 50%;
+  margin-top: -110px;
+  right: 110px;
+  text-align: right;
+}
+#main-title.left {
+  top: 50%;
+  margin-top: -50px;
+  left: 80px;
+}
+#main-title.right {
+  top: 50%;
+  margin-top: -50px;
+  right: 110px;
+  text-align: right;
+}
+
+.button {
+  position: fixed;
+  width: 60px;
+  height: 90px;
+  color: #fff;
+  font-size: 50px;
+  z-index: 100;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+  pointer-events: none;
+}
+
+.button-prev {
+  top: 50%;
+  left: 0;
+  margin: -45px 0 0 40px;
+  background-image: url("../assets/images/sprite.png");
+  background-position: -388px -425px;
+  transform: scaleX(-1);
+}
+
+.button-next {
+  top: 50%;
+  right: 0;
+  margin: -45px 40px 0 0;
+  background-image: url("../assets/images/sprite.png");
+  background-position: -388px -425px;
+}
+
+.button-prev.visible,
+.button-next.visible {
+  opacity: 1;
+  transition: opacity 600ms ease-out;
+  pointer-events: auto;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+.footer__button-container {
+  float: left;
+  margin-right: 20px;
+  border: 1px dotted #fff;
+}
+.footer__button-container li {
+  position: relative;
+  float: left;
+  width: 10px;
+  height: 6px;
+  padding: 3px;
+  border-left: 1px dotted #fff;
+}
+.footer__button-container li:nth-of-type(1) {
+  border-left: none;
+}
+.footer__button {
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  text-decoration: none;
+  font-size: 8px;
+  color: #fff;
+  text-align: center;
+}
+.footer__button--active {
+  background-color: #fff;
+}
+#footer-text {
+  float: left;
+  width: 100%;
+  max-width: 310px;
+  z-index: 100;
+  margin-top: 2px;
+  font-family: "klavikaLight";
+  font-size: 10px;
+  text-align: 1.2em;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+#footer-text.visible {
+  opacity: 0.8;
+  transition: opacity 600ms ease-out;
+}
+#footer-text.landing {
+  position: fixed;
+  float: none;
+  bottom: 80px;
+  left: 20px;
+}
+.footer__logo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 40px 40px 0;
+  width: 118px;
+  height: 65px;
+  background-image: url("../assets/images/sprite.png");
+  background-position: -55px -36px;
+}
+
+.last-slide {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  margin: 20px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: all 800ms ease-in-out;
+}
+.last-slide.visible {
+  right: 0;
+  opacity: 1;
+  transition: all 800ms ease-out;
+}
+.last-slide__title {
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 48px;
+  line-height: 1.2em;
+  font-family: "klavikaLight";
+}
+.last-slide__text,
+.last-slide__social {
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.2em;
+  font-family: "klavikaLight";
+}
+.last-slide__text {
+  right: 0;
+  margin-top: 200px;
+}
+.last-slide__link {
+  color: #fff;
+}
+.last-slide__social {
+  margin-top: 20px;
+  right: 0;
+}
+.last-slide__social li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.last-slide__social li i {
+  margin-right: 5px;
+}
+.last-slide__social li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.preload {
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+  pointer-events: none;
+}
+.preload.visible {
+  opacity: 1;
+  transition: opacity 600ms ease-out;
+}
+.preload__monk {
+  position: fixed;
+  z-index: 106;
+  left: 50%;
+  top: 50%;
+  margin-left: -53px;
+  margin-top: -75px;
+  animation-name: preload-monk;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes preload-monk {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
